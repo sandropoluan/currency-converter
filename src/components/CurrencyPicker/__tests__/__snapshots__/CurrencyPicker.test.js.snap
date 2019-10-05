@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test CurrencyPicker initial renders correctly 1`] = `
+<div
+  className="currency-picker"
+>
+  <div
+    className="add-currency-picker"
+    onClick={[Function]}
+  >
+    + Add more currencies
+  </div>
+</div>
+`;
+
+exports[`Test CurrencyPicker initial renders correctly after button click 1`] = `
+<div
+  className="currency-picker"
+>
+  <div
+    className="add-currency-picker"
+    onClick={[Function]}
+  >
+    + Add more currencies
+  </div>
+</div>
+`;
