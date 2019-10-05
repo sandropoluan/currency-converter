@@ -1,0 +1,35 @@
+.main-app {
+  margin-top: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+
+  .header-box {
+    padding: 8px;
+
+    span {
+      font-size: 13px;
+    }
+
+    .currency-area {
+      display: flex;
+      flex-direction: row;
+      margin-top: 5px;
+
+      > :first-child {
+        width: 50%;
+        font-weight: bold;
+      }
+
+      > :last-child {
+        width: 50%;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .body-box {
+    margin-top: 40px;
+    border-top: 3px solid rgba(0, 0, 0, 0.3);
+    padding: 24px 8px;
+  }
+}

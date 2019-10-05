@@ -1,0 +1,55 @@
+.list-currency {
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+  margin-bottom: 8px;
+
+  > :first-child {
+    flex: 1;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 8px;
+
+
+    .total-area {
+      display: flex;
+      flex-direction: row;
+
+      > :first-child {
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      > :last-child {
+        margin-left: auto;
+      }
+    }
+
+    .label {
+      font-size: 14px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+  }
+
+  > :last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: auto;
+    padding: 4px;
+    height: 100%;
+    background-color: #ff5d61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .min-icon {
+      color: #FFF;
+    }
+  }
+}

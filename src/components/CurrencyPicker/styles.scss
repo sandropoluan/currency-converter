@@ -1,0 +1,24 @@
+.currency-picker {
+  padding: 8px;
+
+  .add-currency-picker {
+    font-weight: bold;
+    color: teal;
+    cursor: pointer;
+  }
+
+  .editor-picker {
+    display: flex;
+    flex-direction: row;
+
+    :first-child{
+      flex: 1;
+      margin-right: 16px;
+    }
+
+    :last-child{
+      margin-left: auto;
+      width: 70px;
+    }
+  }
+}
