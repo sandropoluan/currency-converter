@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import ListCurrency from "../ListCurrency";
 import CurrencyPicker from "../CurrencyPicker";
@@ -6,7 +6,7 @@ import {getAllExchanger, setAmount} from "../../redux/actions";
 import "./styles.scss";
 
 function Main(props) {
-  const {selectedCurrencies, currency, amount, getAllExchanger, setAmount} = props;
+  const {selectedCurrencies, currency, amount, getAllExchanger, setAmount,loading} = props;
 
   const onAmountChange = e => {
     const {value} = e.target;
@@ -16,6 +16,8 @@ function Main(props) {
   useEffect(() => {
     getAllExchanger(currency);
   }, []);
+
+  if(loading) return <div className="loading-box">Loading...</div>;
 
   return <div className="main-app">
     <div className="header-box">
@@ -36,11 +38,12 @@ function Main(props) {
   </div>
 }
 
-export default connect(({app: {listCurrency, currency, amount, selectedCurrencies}}) => ({
+export default connect(({app: {listCurrency, currency, amount, selectedCurrencies,loading}}) => ({
   listCurrency,
   currency,
   amount,
-  selectedCurrencies
+  selectedCurrencies,
+  loading
 }), {
   getAllExchanger, setAmount
 })(Main);

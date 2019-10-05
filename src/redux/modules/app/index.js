@@ -2,7 +2,7 @@ import * as types from "./types";
 import {cloneDeep} from "lodash";
 
 const initialState = {
-  loading: false,
+  loading: true,
   currency: 'USD',
   amount: 10,
   error: '',
