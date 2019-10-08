@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "docker": "docker build -t currency-converter:dev . && docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm currency-converter:dev\n"
   },
   "eslintConfig": {
     "extends": "react-app"
